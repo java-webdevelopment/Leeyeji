@@ -4,23 +4,23 @@ public class BankingApplication {
 
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);//�޴� �Է� ����
+		Scanner sc = new Scanner(System.in);//메뉴 입력 받음
 
 		System.out.print("Insert your Id:");
 		String id = sc.nextLine();
 		System.out.print("Insert your password:");
 		String pw = sc.nextLine();
 
-		Banking_func f = new Banking_func();//�޴����� ����� ��� Ŭ���� ȣ��
+		Banking_func f = new Banking_func();//메뉴들의 기능이 담긴 클래스 호출
 
 		if(id.equals("lee") && pw.equals("1234")) {//id, pw 식별
+			f.menu(id);//id를 메뉴 출력 메서드에 전달
 			while(true) {
-				f.menu(id);//id�� �޴� ��� �޼��忡 ����
 				System.out.println("===================================");
 				System.out.println("Enter an option");
 				System.out.println("===================================");
 
-				String menu = sc.nextLine();//�޴� �Է�
+				String menu = sc.nextLine();//메뉴 입력
 
 				if(menu.equals("a")||menu.equals("A")) {
 					f.balance();
@@ -33,13 +33,13 @@ public class BankingApplication {
 				}else if(menu.equals("e")||menu.equals("E")) {
 					break;
 				}else {					
-					System.out.println("�ٸ� ���� �Է����ּ���!");
-				}//if
+					System.out.println("바른 값을 입력해주세요!");
+				}
 			}//while end
 		}else {
 			System.out.println("Please check your id&password");
 			return;
-		}
+		}//account
 		sc.close();
 	}//main end	
 }
