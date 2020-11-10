@@ -4,23 +4,23 @@ public class BankingApplication {
 
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);//¸Ş´º ÀÔ·Â ¹ŞÀ½
+		Scanner sc = new Scanner(System.in);//ï¿½Ş´ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 		System.out.print("Insert your Id:");
 		String id = sc.nextLine();
 		System.out.print("Insert your password:");
 		String pw = sc.nextLine();
 
-		Banking_func f = new Banking_func();//¸Ş´ºµéÀÇ ±â´ÉÀÌ ´ã±ä Å¬·¡½º È£Ãâ
+		Banking_func f = new Banking_func();//ï¿½Ş´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½
 
-		if(id.equals("lee") && pw.equals("1234")) {
+		if(id.equals("lee") && pw.equals("1234")) {//id, pw ì‹ë³„
 			while(true) {
-				f.menu(id);//id¸¦ ¸Ş´º Ãâ·Â ¸Ş¼­µå¿¡ Àü´Ş
+				f.menu(id);//idï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½ï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½å¿¡ ï¿½ï¿½ï¿½ï¿½
 				System.out.println("===================================");
 				System.out.println("Enter an option");
 				System.out.println("===================================");
 
-				String menu = sc.nextLine();//¸Ş´º ÀÔ·Â
+				String menu = sc.nextLine();//ï¿½Ş´ï¿½ ï¿½Ô·ï¿½
 
 				if(menu.equals("a")||menu.equals("A")) {
 					f.balance();
@@ -33,7 +33,7 @@ public class BankingApplication {
 				}else if(menu.equals("e")||menu.equals("E")) {
 					break;
 				}else {					
-					System.out.println("¹Ù¸¥ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+					System.out.println("ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!");
 				}//if
 			}//while end
 		}else {
