@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Bank_func{
 
-	Scanner scan = new Scanner(System.in);
+	Scanner scan = new Scanner(System.in); //입,출금 기능에서 금액을 입력 받는 
 
 	private int balance;
 	private int money;
