@@ -3,11 +3,11 @@ import java.util.Scanner;
 class Bank_func{
 
 	Scanner scan = new Scanner(System.in);
-	
+
 	private int balance;
 	private int money;
 	private String pre;
-	
+
 	public void menu(String id) {		
 		System.out.println("Welcome XYZ");
 		System.out.println("Your ID is "+id);
@@ -17,7 +17,7 @@ class Bank_func{
 		System.out.println("C. Withdraw");
 		System.out.println("D. Previous transaction");
 		System.out.println("E. Exit");
-	}//¸Ş´º Ãâ·Â
+	}//ë©”ë‰´ ì¶œë ¥
 
 	public void balance() {
 		System.out.println();
@@ -33,43 +33,49 @@ class Bank_func{
 		System.out.println("Enter an amount to deposit");
 		System.out.println("-------------------");
 		this.money = Integer.parseInt(scan.nextLine());
-		
+
 		if (money<=0) {
-			System.out.println("0¿ø ÀÌ»ó ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("0ì› ì´ìƒ ì…ë ¥í•˜ì„¸ìš”.");
 		}else {			
 			balance+=money;
 			pre = "Deposited: ";
 		}
-		
+
 		System.out.println();
 	}
-	
+
 	public void withdraw() {
 		System.out.println();
 		System.out.println("-------------------");
 		System.out.println("Enter an amount to withdraw");
 		System.out.println("-------------------");
 		this.money = Integer.parseInt(scan.nextLine());
-		
-		if(money>=balance) {
-			System.out.println("ÇöÀç ÀÜ°í´Â "+balance+"¿ø ÀÔ´Ï´Ù.");
-			System.out.println(balance+"¿ø ÀÌ»ó Ãâ±İÇÒ ¼ö ¾ø½À´Ï´Ù.");
+
+		if(money>balance) {
+			System.out.println("í˜„ì¬ ì”ê³ ëŠ” "+balance+"ì› ì…ë‹ˆë‹¤.");
+			System.out.println(balance+"ì› ì´ìƒ ì¶œê¸ˆí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}else if(money<=0){
-			System.out.println("0¿ø ÀÌ»ó ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("0ì› ì´ìƒ ì…ë ¥í•˜ì„¸ìš”.");
 		}else {
 			balance-=money;
 		}
 		pre = "withdrawn: ";			
-		
+
 		System.out.println();
 	}
-	
+
 	public void pre() {
 		System.out.println();
 		System.out.println("-------------------");			
-		System.out.println(pre+money);
-		if(money>balance) {
-			System.out.println("ÀÜ°íº¸´Ù ±İ¾×ÀÌ ¸¹¾Æ Ãâ±İ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+
+		if(pre==null) {
+			System.out.println("ì•„ë¬´ë™ì‘ë„ í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤!");
+		}else if(balance==0) {
+			System.out.println(pre+money);
+		}else if(money>balance) {
+			System.out.println("ì”ê³ ë³´ë‹¤ ê¸ˆì•¡ì´ ë§ì•„ ì¶œê¸ˆ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
+		}else {
+			System.out.println(pre+money);
 		}
 		System.out.println("-------------------");
 		System.out.println();
