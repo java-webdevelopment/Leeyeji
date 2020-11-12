@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
-public class Bank_main {
+public class Bank {
 
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);//¸Ş´º ÀÔ·Â ¹ŞÀ½
+		Scanner sc = new Scanner(System.in);//ë©”ë‰´ ì…ë ¥ ë°›ìŒ
 
 		System.out.print("Insert your Id:");
 		String id = sc.nextLine();
 		System.out.print("Insert your password:");
 		String pw = sc.nextLine();
 
-		Bank_func f = new Bank_func();//¸Ş´ºµéÀÇ ±â´ÉÀÌ ´ã±ä Å¬·¡½º È£Ãâ
+		Bank_func f = new Bank_func();//ë©”ë‰´ë“¤ì˜ ê¸°ëŠ¥ì´ ë‹´ê¸´ í´ë˜ìŠ¤ í˜¸ì¶œ
 
 		if(id.equals("lee") && pw.equals("1234")) {
+			f.menu(id);//idë¥¼ ë©”ë‰´ ì¶œë ¥ ë©”ì„œë“œì— ì „ë‹¬
 			while(true) {
-				f.menu(id);//id¸¦ ¸Ş´º Ãâ·Â ¸Ş¼­µå¿¡ Àü´Ş
 				System.out.println("===================================");
 				System.out.println("Enter an option");
 				System.out.println("===================================");
 
-				String menu = sc.nextLine();//¸Ş´º ÀÔ·Â
+				String menu = sc.nextLine();//ë©”ë‰´ ì…ë ¥
 
 				if(menu.equals("a")||menu.equals("A")) {
 					f.balance();
@@ -33,7 +33,7 @@ public class Bank_main {
 				}else if(menu.equals("e")||menu.equals("E")) {
 					break;
 				}else {					
-					System.out.println("¹Ù¸¥ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+					System.out.println("ë°”ë¥¸ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”!");
 				}//if
 			}//while end
 		}else {
