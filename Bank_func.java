@@ -71,6 +71,9 @@ class Bank_func{
 		if(pre==null) {
 			System.out.println("아무동작도 하지 않았습니다!");
 		}else if(balance==0) {
+			//예를 들어 잔고가 2000원이었는데 withdraw의 money에 2000을 입력하면
+			//잔고가 0이 되므로 money>balance에 걸려 아래의 출금에 실패 했다는 메시지 출력.
+			//이를 방지 하기 위해 balance가 0이 될 경우 'withdraw : 금액'이 출력 되도록 함.
 			System.out.println(pre+money);
 		}else if(money>balance) {
 			System.out.println("잔고보다 금액이 많아 출금 실패하였습니다.");
