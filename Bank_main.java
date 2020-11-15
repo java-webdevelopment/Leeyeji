@@ -1,20 +1,18 @@
 import java.util.Scanner;
 
-public class Bank {
+public class Bank_main {
 
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);//메뉴 입력 받음
-
-		System.out.print("Insert your Id:");
-		String id = sc.nextLine();
-		System.out.print("Insert your password:");
-		String pw = sc.nextLine();
-
 		Bank_func f = new Bank_func();//메뉴들의 기능이 담긴 클래스 호출
-
+		
+		f.login();
+		String id = f.getId();
+		String pw = f.getPw();
+		
 		if(id.equals("lee") && pw.equals("1234")) {
-			f.menu(id);//id를 메뉴 출력 메서드에 전달
+			f.menu();
 			while(true) {
 				System.out.println("===================================");
 				System.out.println("Enter an option");
@@ -34,6 +32,7 @@ public class Bank {
 					break;
 				}else {					
 					System.out.println("바른 값을 입력해주세요!");
+					System.out.println();
 				}//if
 			}//while end
 		}else {
