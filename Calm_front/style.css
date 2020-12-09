@@ -1,0 +1,438 @@
+    body{
+        display: flex;
+        flex-direction: row;
+        margin:0;
+        padding:0;
+        position: relative;
+    }
+
+    body::after{
+        content: "";
+        background-image:url(/mini_project/calm_images/back.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity:0.6;
+        position: absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        margin:0;
+        z-index: -1;
+        /* https://ddorang-d.tistory.com/89 해결법 1 참고*/
+    }
+
+    .login{
+        flex-direction: row;
+        padding:20px;
+        color:white;
+        font-size:20px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .combo{
+        position: absolute;
+        flex-direction: row;
+        margin-left: 30px;
+        font-size:50px;
+        font-weight: bold;
+        color:beige;
+    }
+
+    .combo select{
+        position: absolute;
+        border-radius: 50px;  
+        margin-left:20px;
+        margin-top:13px;
+        width:181px; 
+        height:50px; 
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .daily{
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        height:60px;
+        width:auto;
+        align-content: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 32px;
+        margin-top: 80px;
+        margin-bottom:20px;
+        margin-left: 30px; 
+        margin-right: 65px;
+        padding-top:1px;
+        padding-left:10px;
+    }
+    
+    .daily_image{
+        width:50px;
+        height:50px;
+        margin-right:20px;
+        margin-left:0px;
+        background-image: url(./mini_project/calm_images/8.jpg);
+        border-radius: 50px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    .nav{
+        display: flex;
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: 300px;
+        height: auto; /*item 줄이 늘어나는 거에 맞춰서 늘어나야 하니까
+        여기를 고정 값이 아닌 auto로 해준다. 고정값으로 하면 아무리 늘어나도 그만큼만 늘어남*/
+        flex-direction: column;
+        flex-wrap:nowrap;
+        /* rgba 마지막 속성이 배경의 투명도 결정*/
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size:20px; font-weight: bold; 
+        flex:none;
+        padding-top:20px;
+        /* flex:none으로 설정시 늘거나 줄지 않는다*/
+        list-style:none;
+    } 
+    
+    .nav_logo{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        font-family: 'Cedarville Cursive', cursive; 
+        font-size: 30px; font-weight:bold;
+        padding-left:30px;
+        padding-bottom: 20px;
+    }
+    
+    .free{
+        list-style:none;
+        margin-left: 25px;
+    }
+
+    .nav_menu{
+        list-style: none;
+        margin-bottom: 0;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    
+    /*메뉴 아이콘*/
+    .nav_menu i{ 
+        font-size: 29px;
+        margin-right: 5px;
+    }
+    
+    /*햄버거 버튼 span 세 개로 만듦*/
+    #menuicon{
+        display: none;
+        right: 32px; /*오른쪽에서 32px 떨어진 곳에 배치*/
+        margin-top:35px;
+        margin-left:0;
+    }
+    
+    .main{
+        height: 100%;
+        width:auto;
+        flex:4; 
+        /*body 안에서 nav와 main의 공간 비율. 이정도 공간을 부여하지 않으면 세로 일렬로 나와버림*/
+    }
+    
+    .items{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /*repeat(auto-fill, minmax(100px, 1fr)) : 5개열이 반복되고 최소100px, 최대 1fr*/
+        /*auto-fit은 쭉 늘려서 row에 딱 맞추는 것*/
+        /* https://blog.naver.com/bjoh1227/222025668234 참고 */
+        grid-gap: 5px;
+        width: auto;
+        height: 100%;
+        flex-wrap:wrap;
+        margin-bottom:100px;
+        margin-left:5px;
+        text-align:center;
+    }
+  
+    .items p{ /*아이템들 안의 제목들*/
+        position:relative;
+        top:150px;
+        background-color: rgba(0,0,0,0.5);
+
+        color:white;
+        text-align:center;
+        line-height:50px;
+    }
+
+    .items a{
+        width:200px;
+        height:219px;
+    }
+
+    .item1{
+        background-image: url(/mini_project/calm_images/1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+
+    .item1:hover{
+        opacity:0.8;
+    }
+    
+    .item2{
+        background-image: url(/mini_project/calm_images/2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    .item2:hover{
+        opacity:0.8;
+    }
+
+    .item3{
+        background-image: url(/mini_project/calm_images/3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item3:hover{
+        opacity:0.8;
+    }
+
+    .item4{
+        background-image: url(/mini_project/calm_images/4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item4:hover{
+        opacity:0.8;
+    }
+
+    .item5{
+        background-image: url(/mini_project/calm_images/5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+
+    .item5:hover{
+        opacity:0.8;
+    }
+
+    .item6{
+        background-image: url(/mini_project/calm_images/6.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item6:hover{
+        opacity:0.8;
+    }
+
+    .item7{
+        background-image: url(/mini_project/calm_images/7.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item7:hover{
+        opacity:0.8;
+    }
+
+    .item8{
+
+        background-image: url(/mini_project/calm_images/8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item8:hover{
+        opacity:0.8;
+    }
+
+    .item9{
+        background-image: url(/mini_project/calm_images/9.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+    
+    .item9:hover{
+        opacity:0.8;
+    }
+
+    
+    .item10{
+        background-image: url(/mini_project/calm_images/10.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /*꽉차게*/
+        width:200px; height: 219px;
+        flex-wrap: nowrap;
+        border:1px;
+        border-radius: 20px;
+    }
+
+    .item10:hover{
+        opacity:0.8;
+    }
+
+
+    @media screen and (max-width: 800px){
+        /* 로고는 row 정렬, nav는 column 정렬*/
+
+        body{
+            flex-direction: column;
+            margin:0;
+            width:100%;
+        }
+        
+        .nav{
+            display: flex;
+            flex-direction: column; /*감춰진 menu까지 정렬하는 것을 생각해야 함*/
+            width:100%;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .nav_logo{
+            display:flex;
+            flex-direction: row; /*안에 있는 세개 요소 가로 정렬*/
+            padding-right:0px;
+            margin-right: 0px;
+        }
+
+        .logo{
+            display: flex;
+            margin-left: -10px;
+            margin-top: 20px;
+            flex:1;
+            align-self: center;
+        }
+        .free{
+            display: flex;
+            padding-top: 0px;
+            margin-right: 95px;
+            margin-left:5px;
+            align-self: center;
+            flex:1;
+        }
+
+        #menuicon + label {/* +는 인접요소 선택자*/
+            display:flex;
+            position:relative;
+            flex:0.35;
+            margin-top:37px;
+            margin-bottom:36px;
+            cursor:pointer;
+        }
+        #menuicon + label span{
+            display: block;
+            position: absolute;
+            width:28px;
+            height:4px;
+            border-radius: 30px;
+            background:white;
+            transition:all .35s;
+        }
+        #menuicon + label span:nth-child(1){
+            top:0;
+        }
+        #menuicon + label span:nth-child(2){
+            top:50%;
+            transform:translateY(-50%);
+        }
+        #menuicon + label span:nth-child(3){
+            bottom:0;
+        }
+
+        #menuicon:checked + label span:nth-child(1){
+            top:50%;
+            transform:translateY(-50%) rotate(42deg);
+        }
+        #menuicon:checked + label span:nth-child(2){
+           opacity:0;
+        }
+        #menuicon:checked + label span:nth-child(3){
+            bottom:36%;
+            transform:translateY(-50%) rotate(-42deg);
+        }
+
+        .nav_menu {
+            display: none;
+            flex-direction: column;
+            border:top 1px white;
+            text-align: center;
+            margin-bottom:20px;
+            flex-wrap: wrap;
+            font-size:20px;
+            padding:0;
+        }
+
+        .login{
+            display: none;
+        }
+
+        .combo{
+            padding-left:25px;
+        }
+
+        #all{
+            margin-top:10px;
+            margin-left:10px;
+        }
+
+        .daily{
+            margin-top:80px;
+            margin-left:50px;
+            margin-right:50px;
+            width:auto;
+            flex:auto;
+        }
+
+        .items{
+            margin-left:25px;
+        }
+
+        .nav_menu.active {
+            display: flex;  
+        }
+    }

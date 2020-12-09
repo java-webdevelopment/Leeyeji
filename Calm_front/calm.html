@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+<title>calm</title>
+<head> 
+    <link rel="stylesheet" href="style.css">
+
+    <!--아이콘-->
+    <script src="https://kit.fontawesome.com/166f546f0b.js" crossorigin="anonymous"></script>
+
+    <!--main.js 연결-->
+    <script src="main.js" defer></script>
+    <!--이 파일을 다 받을 때까지 브라우저에 html내용 안 나오는 거 방지 : defer-->
+
+    <!--폰트-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="nav">
+
+        <div class="nav_logo">
+            <div class="logo"><a href="" >Calm</a></div>
+            <div class="free"><a href="" >Calm 무료 체험</a></div>     
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="nav_menu">
+              <li><a href=""><i class="fas fa-home" ></i> 홈</a></li> <br/><br/>
+              <!-- i class 안의 font-size는 아이콘 크기 조절-->
+              <li><a href=""><i class="fas fa-cloud-moon"></i> 수면</a></li> <br/><br/>
+              <li><a href=""><i class="fas fa-brain"></i> 명상</a></li> <br/><br/>
+              <li><a href=""><i class="fas fa-music" style="margin-right: 7px;"></i> 음악</a></li> <br/><br/>
+              <li><a href=""><i class="fas fa-mountain" style="font-size:26px;"></i> 배경장면</a></li> <br/><br/>
+              <li><a href=""><i class="fas fa-user-circle" style="font-size:34px"></i> 프로필</a></li> <br/><br/>
+              <li><a href="https://www.calm.com/?coupon=freetrial">calm.com으로 이동</a></li> 
+        </div>
+    </nav>
+       
+    <div class="main">
+
+        <!--로그인 -->  
+        <div class="login">
+            <a href="">
+                로그인
+            </a>
+        </div>
+        
+    <!--콤보박스-->
+        <span class="combo">명상
+            <select name="전체" id="all">
+                <option value="">전체</option>
+                <option value="">나의♥</option>
+                <option value="">수면</option>
+                <option value="">불안</option>
+                <option value="">초보자</option>
+                <option value="">스트레스</option>
+                <option value="">일</option>
+                <option value="">자기돌봄</option>
+                <option value="">내면의 평화</option>
+                <option value="">집중</option>
+                <option value="">감정</option>
+                <option value="">자유명상</option>
+                <option value="">관계</option>
+                <option value="">자기성장</option>
+                <option value="">키즈</option>
+                <option value="">특별 게스트 콘텐츠</option>
+            </select>
+        </span>
+    
+    <!--daily 메뉴-->
+        <a href="" class="daily">
+                <p class="daily_image"></p>
+                <p>Daily calm <br> 12월 9일 - 경이로운 순간</p>
+        </a>
+    <!-- 각 명상 메뉴들 -->
+    <div class="items">
+        <a href=""><div class="item1">
+            <p class="title1">7일간의 Calm</p>
+        </div></a>
+        <a href=""><div class="item2">
+            <p class="title2">숙면을 위한 이완 명상</p>
+        </div></a>
+        <a href=""><div class="item3">
+            <p class="title3">숙면 휴식</p>
+        </div></a>
+        <a href=""><div class="item4">
+            <p class="title4">직장에서의 마음 챙김</p>
+        </div></a>
+        <a href=""><div class="item5">
+            <p class="title5">90초 명상</p>
+        </div></a>
+        <a href=""><div class="item6">
+            <p class="title6">어린이를 위한 마음 챙김</p>
+        </div></a>
+        <a href=""><div class="item7">
+            <p class="title7">시간지정 명상</p>
+        </div></a>
+        <a href=""><div class="item8">
+            <p class="title8">열린 명상</p>
+        </div></a>
+        <a href=""><div class="item9">
+            <p class="title9">Daily Calm 하이라이트</p>
+        </div></a>
+        <a href=""><div class="item10">
+            <p class="title10">지금 이순간에 집중하기</p>
+        </div></a>
+
+    </div><!--items-->
+</div><!--main-->
+</body>
+</html>
+
